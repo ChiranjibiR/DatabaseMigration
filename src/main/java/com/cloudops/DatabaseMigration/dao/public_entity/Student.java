@@ -35,17 +35,4 @@ public class Student {
 
     public String getIs_active() {return is_active;}
     public void setIs_active(String is_active) {this.is_active = is_active;}
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(id, student.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 }
