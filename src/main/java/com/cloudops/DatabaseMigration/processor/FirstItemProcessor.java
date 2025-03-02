@@ -11,6 +11,7 @@ public class FirstItemProcessor implements ItemProcessor<Student, com.cloudops.D
     public com.cloudops.DatabaseMigration.dao.university_entity.Student process(Student item) throws Exception {
 
         System.out.println("Processed Id: "+item.getId());
+        System.out.println("Email Id: "+item.getEmail());
         com.cloudops.DatabaseMigration.dao.university_entity.Student student = new com.cloudops.DatabaseMigration.dao.university_entity.Student();
         student.setId(item.getId()); // Ensure consistency
         student.setFirst_name(item.getFirst_name());

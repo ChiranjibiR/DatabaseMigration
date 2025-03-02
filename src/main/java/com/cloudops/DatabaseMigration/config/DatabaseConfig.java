@@ -71,4 +71,6 @@ public class DatabaseConfig {
     public JpaTransactionManager universityTransactionManager(@Qualifier("universityEntityManagerFactory") EntityManagerFactory universityEntityManagerFactory) {
         return new JpaTransactionManager(universityEntityManagerFactory);
     }
+
+    /**This is the first comment in feature branch and I want this in main branch as well**/
 }
