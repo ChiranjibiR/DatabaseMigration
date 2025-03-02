@@ -68,7 +68,9 @@ public class SampleJob {
     public JpaCursorItemReader<Student> jpaCursorItemReader(){
         JpaCursorItemReader<Student> jpaItemReader = new JpaCursorItemReader<>();
         jpaItemReader.setEntityManagerFactory(entityManagerFactory);
-        jpaItemReader.setQueryString("SELECT s FROM Student s");
+        jpaItemReader.setQueryString("FROM Student");
+        jpaItemReader.setCurrentItemCount(10000);
+        jpaItemReader.setMaxItemCount(30000);
         return jpaItemReader;
     }
 
